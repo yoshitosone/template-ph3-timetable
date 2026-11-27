@@ -1,10 +1,11 @@
 // POSSE大学の授業データ（docker/postgres/init/01-courses.sql と同じ中身）
 // teacher が null の授業は、担当の先生がまだ決まっていない
+import type { Course } from "./timetable.ts";
 
-export const courses = [
+export const courses : Course[] = [
   { id: 1, code: "CS101", name: "プログラミング入門", teacher: "前田 光", day: 1, period: 1, room: "J201", credits: 2, required: true },
   { id: 2, code: "EC100", name: "経済学入門", teacher: "藤田 剛", day: 1, period: 1, room: "A101", credits: 2, required: true },
-  { id: 3, code: "IE110", name: "情報倫理", teacher: "岡田 恵", day: 1, period: "3", room: "J101", credits: 2, required: true },
+  { id: 3, code: "IE110", name: "情報倫理", teacher: "岡田 恵", day: 1, period: 3, room: "J101", credits: 2, required: true },
   { id: 4, code: "EN101", name: "英語コミュニケーションⅠ", teacher: "石川 舞", day: 1, period: 2, room: "B203", credits: 1, required: true },
   { id: 5, code: "MA110", name: "微分積分", teacher: "小川 拓", day: 1, period: 4, room: "C305", credits: 2, required: false },
   { id: 6, code: "SO120", name: "社会学概論", teacher: "中島 葉月", day: 1, period: 5, room: "A202", credits: 2, required: false },
